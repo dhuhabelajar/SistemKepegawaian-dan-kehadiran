@@ -1,0 +1,35 @@
+public class Sistemkepegawaian {
+    private int nik;
+    private String nama;
+    private int gajiPokok;
+    private int kehadiran;
+
+    public Sistemkepegawaian(int nik, String nama, int gajiPokok) {
+        this.nik = nik;
+        this.nama = nama;
+        this.gajiPokok = gajiPokok;
+    }
+    public int getNik() {
+        return nik;
+    }
+    public String getNama() {
+        return nama;
+    }
+    public int getGajiPokok(){
+        return gajiPokok;
+    }
+    public int getkehadiran(){
+        return kehadiran;
+    }
+    ;public void hitungGaji(){
+        double tunjTransportasi = gajiPokok * 0.05;
+        double tunjKinerja = gajiPokok * 0.1;
+        double tunjMakan =35000 * kehadiran;
+        double totalsebelumpajak = gajiPokok + tunjTransportasi + tunjKinerja;
+
+        double pajak = totalsebelumpajak * 0.025;
+        double total = totalsebelumpajak - pajak;
+
+        System.out.println("Rp " + total);
+    }
+}
